@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .product{background-color: #cccccc;}
+    .product::after{
+        content:" ";
+        display:block;
+        clear:both;}/*自我强制换行使得左右都没有浮动元素*/
+    .product{
+        height:100px;
+        float:left;
+    }
+    .product > div.left{
+        background-color:pink;
+        width:100px;
+         }
+    .product > div.right{
+         background-color: teal;
+         width:200px;}
+    </style>
+</head>
+<body>
+    <div class="product">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+</body>
+</html>

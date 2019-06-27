@@ -1,0 +1,9 @@
+.header > ul {
+    background-color:pink;
+}
+ul::after{
+    content:"hello"
+}
+.header > ul > li:hover{
+    background-color: aqua;
+}

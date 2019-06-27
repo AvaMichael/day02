@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body,ul{
+        margin:0;
+        padding:0;
+        }/*body满屏铺满，取消外边距*/
+    .products{
+        width:800px;
+        background-color: #ededed;
+        }/*父元素定义宽度*/
+    .products::after{
+        content:" ";
+        display:block;
+        clear:both;
+        }/*确保父元素能够显示*/
+    .products > li{
+        float:left;
+        height:100px;
+        width:260px;/*(800-20)/3*/
+        margin-right:10px;
+        margin-bottom: 10px;
+        background-color: teal;
+    }
+    .products > li:nth-child(3n){
+        margin-right:0;
+    }/*当个数为3的倍数时，右边距设置为0，一行显示3个*/
+    </style>
+</head>
+<body>
+    <ul class="products">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
